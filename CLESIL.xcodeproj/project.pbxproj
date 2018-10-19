@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1622AA8A6D1BE2A58157E73 /* Pods_CLESIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E30C256FBC6024B8A7E8D23 /* Pods_CLESIL.framework */; };
+		A4C2EB6D217A5C75008F9233 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4C2EB6C217A5C75008F9233 /* GoogleService-Info.plist */; };
 		A4D8C7012179320300BFC5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8C7002179320300BFC5B4 /* AppDelegate.swift */; };
-		A4D8C7032179320300BFC5B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8C7022179320300BFC5B4 /* ViewController.swift */; };
 		A4D8C7062179320300BFC5B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D8C7042179320300BFC5B4 /* Main.storyboard */; };
 		A4D8C7082179321000BFC5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D8C7072179321000BFC5B4 /* Assets.xcassets */; };
 		A4D8C70B2179321000BFC5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D8C7092179321000BFC5B4 /* LaunchScreen.storyboard */; };
@@ -18,9 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E30C256FBC6024B8A7E8D23 /* Pods_CLESIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLESIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79B6B160295FD423F87782DC /* Pods-CLESIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLESIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLESIL/Pods-CLESIL.release.xcconfig"; sourceTree = "<group>"; };
+		A4C2EB6C217A5C75008F9233 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A4D8C6FD2179320200BFC5B4 /* CLESIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLESIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D8C7002179320300BFC5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4D8C7022179320300BFC5B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4D8C7052179320300BFC5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4D8C7072179321000BFC5B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D8C70A2179321000BFC5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		A4E6613E21794A5100C972AC /* CategorysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorysController.swift; sourceTree = "<group>"; };
 		A4E6614021794AB600C972AC /* mCategorys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mCategorys.swift; sourceTree = "<group>"; };
 		A4EA3A10217940AE007C51BB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D69796B992379FA2E5D0ECD4 /* Pods-CLESIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLESIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLESIL/Pods-CLESIL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1622AA8A6D1BE2A58157E73 /* Pods_CLESIL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B195F6AF505EBB8A452C78E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D69796B992379FA2E5D0ECD4 /* Pods-CLESIL.debug.xcconfig */,
+				79B6B160295FD423F87782DC /* Pods-CLESIL.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8880C9B00A5E1E9490ACB79F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E30C256FBC6024B8A7E8D23 /* Pods_CLESIL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4D8C6F42179320100BFC5B4 = {
 			isa = PBXGroup;
 			children = (
 				A4D8C6FF2179320200BFC5B4 /* CLESIL */,
 				A4D8C6FE2179320200BFC5B4 /* Products */,
+				3B195F6AF505EBB8A452C78E /* Pods */,
+				8880C9B00A5E1E9490ACB79F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,9 +88,9 @@
 				A4E6613C21794A0F00C972AC /* view */,
 				A4E6613B21794A0200C972AC /* model */,
 				A4D8C7002179320300BFC5B4 /* AppDelegate.swift */,
-				A4D8C7022179320300BFC5B4 /* ViewController.swift */,
 				A4D8C7042179320300BFC5B4 /* Main.storyboard */,
 				A4D8C7072179321000BFC5B4 /* Assets.xcassets */,
+				A4C2EB6C217A5C75008F9233 /* GoogleService-Info.plist */,
 				A4D8C7092179321000BFC5B4 /* LaunchScreen.storyboard */,
 				A4D8C70C2179321000BFC5B4 /* Info.plist */,
 			);
@@ -76,6 +100,7 @@
 		A4E6613B21794A0200C972AC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				A4E6614021794AB600C972AC /* mCategorys.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -83,7 +108,6 @@
 		A4E6613C21794A0F00C972AC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				A4E6614021794AB600C972AC /* mCategorys.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -91,8 +115,8 @@
 		A4E6613D21794A1700C972AC /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4E6614321794AED00C972AC /* Categorys */,
 				A4E6614221794AE200C972AC /* Login */,
+				A4E6614321794AED00C972AC /* Categorys */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -120,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4D8C70F2179321000BFC5B4 /* Build configuration list for PBXNativeTarget "CLESIL" */;
 			buildPhases = (
+				CF753581616B406F54E7F0C4 /* [CP] Check Pods Manifest.lock */,
 				A4D8C6F92179320200BFC5B4 /* Sources */,
 				A4D8C6FA2179320200BFC5B4 /* Frameworks */,
 				A4D8C6FB2179320200BFC5B4 /* Resources */,
+				0DCEA5E365A1D5D3BEFDCB01 /* [CP] Embed Pods Frameworks */,
+				202B9061BA448E96A8C140EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D8C70B2179321000BFC5B4 /* LaunchScreen.storyboard in Resources */,
+				A4C2EB6D217A5C75008F9233 /* GoogleService-Info.plist in Resources */,
 				A4D8C7082179321000BFC5B4 /* Assets.xcassets in Resources */,
 				A4D8C7062179320300BFC5B4 /* Main.storyboard in Resources */,
 			);
@@ -179,13 +207,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DCEA5E365A1D5D3BEFDCB01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CLESIL/Pods-CLESIL-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLESIL/Pods-CLESIL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		202B9061BA448E96A8C140EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CLESIL/Pods-CLESIL-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLESIL/Pods-CLESIL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF753581616B406F54E7F0C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CLESIL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4D8C6F92179320200BFC5B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A4E6613F21794A5100C972AC /* CategorysController.swift in Sources */,
-				A4D8C7032179320300BFC5B4 /* ViewController.swift in Sources */,
 				A4EA3A11217940AE007C51BB /* LoginController.swift in Sources */,
 				A4E6614121794AB600C972AC /* mCategorys.swift in Sources */,
 				A4D8C7012179320300BFC5B4 /* AppDelegate.swift in Sources */,
@@ -330,6 +420,7 @@
 		};
 		A4D8C7102179321000BFC5B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69796B992379FA2E5D0ECD4 /* Pods-CLESIL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +439,7 @@
 		};
 		A4D8C7112179321000BFC5B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B6B160295FD423F87782DC /* Pods-CLESIL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
