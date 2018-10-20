@@ -7,9 +7,8 @@ target 'CLESIL' do
 
   # Pods for CLESIL
 pod 'Firebase/Core'
+pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
-
-
 
 end

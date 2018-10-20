@@ -20,6 +20,23 @@ class CategorysController:UIViewController{
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SingOut", style: .plain, target: self, action: #selector(singOut))
     }
     
+    /*
+     let tvMail : UITextField = {
+     let tv = UITextField()
+     tv.text = ""
+     tv.placeholder = "Correo Electronico"
+     tv.leftView = UIImageView(image: UIImage(named: "usuario"))
+     tv.leftViewMode = .always
+     tv.borderStyle = UITextBorderStyle.roundedRect
+     tv.autocorrectionType = UITextAutocorrectionType.no
+     tv.keyboardType = UIKeyboardType.default
+     tv.returnKeyType = UIReturnKeyType.done
+     tv.clearButtonMode = UITextFieldViewMode.whileEditing;
+     tv.translatesAutoresizingMaskIntoConstraints = false
+     return tv
+     }()
+     */
+    
     
     @objc func back(){
         print("back")

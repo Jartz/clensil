@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A8A4FA94293708D0C979B7713DD53527"
+               BlueprintIdentifier = "9E24C1A45D73A1C45D2A3EF811F64B75"
                BuildableName = "Pods_CLESIL.framework"
                BlueprintName = "Pods-CLESIL"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A8A4FA94293708D0C979B7713DD53527"
+            BlueprintIdentifier = "9E24C1A45D73A1C45D2A3EF811F64B75"
             BuildableName = "Pods_CLESIL.framework"
             BlueprintName = "Pods-CLESIL"
             ReferencedContainer = "container:Pods.xcodeproj">

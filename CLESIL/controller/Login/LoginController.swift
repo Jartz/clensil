@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FirebaseFirestore
 
 class LoginController: UIViewController, GIDSignInUIDelegate{
     override func viewDidLoad(){
@@ -22,14 +23,14 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         validateUserCurrent()
         
         Auth.auth().addStateDidChangeListener() { (auth, firebaseUser) in
-            if let firebaseUser = firebaseUser {
-                self.goCategorys()
+            if firebaseUser != nil {
+                self.validateUserCurrent()
             } else {
                 print("not logged int")
             }
         }
         
-          /*
+        /*
          let blurEffect = UIBlurEffect(style: .light)
          let blurView = UIVisualEffectView(effect:blurEffect)
          blurView.frame = background_image.bounds
@@ -45,13 +46,19 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         container.addSubview(btnCategorys)
         container.addSubview(lbTitle)
         container.addSubview(lbSubTitle)
+        container.addSubview(separationLeft)
         container.addSubview(lbLogin)
+         container.addSubview(separationRigth)
         container.addSubview(ivButtonLogin)
+        container.addSubview(footerContainer)
+        footerContainer.addSubview(lbTerm)
+        container.addSubview(lbFooter)
+        
         setupConstraint()
     }
     
     func actionImages(){
-     ivButtonLogin.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(singGoogle)))
+        ivButtonLogin.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(singGoogle)))
     }
     
     // ======== CONFIG ==========
@@ -129,23 +136,60 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         return btn
     }()
     
-   
-    /*
-     let tvMail : UITextField = {
-     let tv = UITextField()
-     tv.text = ""
-     tv.placeholder = "Correo Electronico"
-     tv.leftView = UIImageView(image: UIImage(named: "usuario"))
-     tv.leftViewMode = .always
-     tv.borderStyle = UITextBorderStyle.roundedRect
-     tv.autocorrectionType = UITextAutocorrectionType.no
-     tv.keyboardType = UIKeyboardType.default
-     tv.returnKeyType = UIReturnKeyType.done
-     tv.clearButtonMode = UITextFieldViewMode.whileEditing;
-     tv.translatesAutoresizingMaskIntoConstraints = false
-     return tv
-     }()
-     */
+    
+    
+    let footerContainer : UIView  = {
+        let cont = UIView()
+        cont.backgroundColor = .white
+        cont.translatesAutoresizingMaskIntoConstraints = false
+        return cont
+    }()
+    
+    let lbFooter: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.text = "Upon entering you accept"
+        lb.textColor = .white
+        lb.font = lb.font.withSize(12)
+        lb.textAlignment = .center
+        return lb
+    }()
+    
+    
+    let lbTerm: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.text = "Terms & conditional"
+        lb.textColor =  UIColor(red: 0/255, green:112/255, blue: 201/255, alpha: 1.0)
+        lb.font = lb.font.withSize(12)
+        lb.textAlignment = .center
+        return lb
+    }()
+    
+    
+    let separationLeft : UIView  = {
+        let sp = UIView()
+        sp.layer.borderWidth = 1.0
+        sp.layer.borderColor = UIColor.white.cgColor
+        sp.backgroundColor = .white
+        sp.translatesAutoresizingMaskIntoConstraints = false
+        return sp
+    }()
+    
+    let separationRigth : UIView  = {
+        let sp = UIView()
+        sp.layer.borderWidth = 1.0
+        sp.layer.borderColor = UIColor.white.cgColor
+        sp.backgroundColor = .white
+        sp.translatesAutoresizingMaskIntoConstraints = false
+        return sp
+    }()
+    
+    
+    
+    
+    
+    
     
     
     
@@ -177,15 +221,37 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         lbSubTitle.leftAnchor.constraint(equalTo: container.leftAnchor).isActive = true
         lbSubTitle.rightAnchor.constraint(equalTo: container.rightAnchor).isActive = true
         
+        separationLeft.centerYAnchor.constraint(equalTo: lbLogin.centerYAnchor).isActive = true
+        separationLeft.leftAnchor.constraint(equalTo: container.leftAnchor,constant: 22).isActive = true
+        separationLeft.rightAnchor.constraint(equalTo: lbLogin.leftAnchor,constant:-22).isActive = true
+        separationLeft.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
         lbLogin.topAnchor.constraint(equalTo: lbSubTitle.bottomAnchor, constant: 33).isActive = true
-        lbLogin.leftAnchor.constraint(equalTo: container.leftAnchor).isActive = true
-        lbLogin.rightAnchor.constraint(equalTo: container.rightAnchor).isActive = true
+        lbLogin.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+        
+        separationRigth.centerYAnchor.constraint(equalTo: lbLogin.centerYAnchor).isActive = true
+        separationRigth.leftAnchor.constraint(equalTo: lbLogin.rightAnchor ,constant: 22).isActive = true
+        separationRigth.rightAnchor.constraint(equalTo: container.rightAnchor ,constant:-22).isActive = true
+        separationRigth.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         ivButtonLogin.heightAnchor.constraint(equalToConstant: 48).isActive = true
         ivButtonLogin.widthAnchor.constraint(equalToConstant: 48).isActive = true
         ivButtonLogin.topAnchor.constraint(equalTo: lbLogin.bottomAnchor, constant : 37).isActive = true
         ivButtonLogin.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
         
+        
+        footerContainer.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
+        footerContainer.leftAnchor.constraint(equalTo: container.leftAnchor).isActive = true
+        footerContainer.rightAnchor.constraint(equalTo: container.rightAnchor).isActive = true
+        footerContainer.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        lbTerm.centerYAnchor.constraint(equalTo: footerContainer.centerYAnchor).isActive = true
+        lbTerm.leftAnchor.constraint(equalTo: footerContainer.leftAnchor).isActive = true
+        lbTerm.rightAnchor.constraint(equalTo: footerContainer.rightAnchor).isActive = true
+        
+        lbFooter.bottomAnchor.constraint(equalTo: container.bottomAnchor,constant: -65).isActive = true
+        lbFooter.leftAnchor.constraint(equalTo: container.leftAnchor).isActive = true
+        lbFooter.rightAnchor.constraint(equalTo: container.rightAnchor).isActive = true
        
     }
     
@@ -193,9 +259,30 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email
-            print(email as! String)
-            goCategorys()
+            let name = user.displayName
+            let uid = user.uid
+            let countryCode = (Locale.current as NSLocale).object(forKey: .countryCode)
+            
+            saveUsers(email: email!,name: name!,uid:uid,countryCode:countryCode as! String)
+            
         }
+    }
+    
+    func saveUsers(email:String,name:String,uid:String,countryCode:String){
+        let db = Firestore.firestore()
+        db.collection("users").document(uid).setData([
+            "email": email,
+            "name": name,
+            "uid":uid,
+            "countryCode":countryCode
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        goCategorys()
     }
     
     
@@ -206,7 +293,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         self.present(navigationController, animated: true, completion: nil)
     }
     
- 
+    
     
     @objc func singGoogle(sender: UITapGestureRecognizer){
         print("Tap Gesture recognized")
